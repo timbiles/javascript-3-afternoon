@@ -21,7 +21,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+var {color, make, model, year} = carDetails;
 
 
 
@@ -34,7 +34,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
+  var {firstName, lastName, title} = obj;
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -53,7 +53,14 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+
+var totalPopulation = (obj) => {
+  var {utah, california, texas, arizona} = obj;
+  var total = utah + california + texas + arizona;
+  return total
+}
+
+
 
 
 
@@ -67,7 +74,12 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+var ingredients = (obj) => {
+  var arr = [];
+  var {carb, fat, protein} = obj;
+  arr.push(carb, fat, protein);
+  return arr
+}
 
 
 
@@ -85,7 +97,12 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers( {first, second, third} ) {
+  var smallNum = [];
+  smallNum.push(first, second, third);
+  return smallNum.sort( (a, b) => a-b)[0]
+} 
+
 
 
 
@@ -97,6 +114,35 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+// function numberGroups( {a, b, c} ) {
+  
+//   var longest = [];
 
+//   longest.push(a, b, c);
 
+//   var theLongestArr = a.length
+
+//   function cb(element){
+//       if(element.length > theLongestArr){
+//         theLongestArr = element.length;
+//       }
+//   }
+
+//   longest.forEach(cb)
+
+//   return theLongestArr
+    
+//   }
+
+  function numberGroups( {a, b, c} ) {
+    let arrays = [a, b, c]
+    let longest = [];
+    
+    arrays.forEach( (array, index ) => {
+      if (array.length > longest.length) {
+        longest.push(arrays[index]);
+      }
+    })
+    
+    return longest;
+  }

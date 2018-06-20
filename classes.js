@@ -110,6 +110,8 @@ class ProgressiveManager extends Manager {
   }
 }
 
+ProgressiveManager
+
 
 
 ////////// PROBLEM 4 - Black Diamond //////////
