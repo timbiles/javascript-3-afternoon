@@ -77,21 +77,27 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-// function removeDuplicates() {
-//   for(let i = 0; i<workplaceAccidents; i++){
-//     if(workplaceAccidents.includes(workplaceAccidents[i]){
+// function removeDuplicates (workplaceAccidents){
+//   for (var i=0; i<workplaceAccidents; i++){
+//     for (var j=i + 1; j<workplaceAccidents; j++){
+//     if (arr[i] === arr[j]){
 //       workplaceAccidents.splice(i, 1)
-//     }
+//     }}
 //   }
+//   return workplaceAccidents
 // }
 
-function removeDuplicates (workplaceAccidents){
-  for (var i=0; i<workplaceAccidents; i++){
-    for (var j=0; j<workplaceAccidents; j++){
-    if (arr[i] === arr[j]){
-      return workplaceAccidents.splice(arr[i], 1)
-    }}
+
+var removeDuplicates = (arr) => {
+  for(var i = 0; i < arr.length; i++) {
+    for(var j = i + 1; j < arr.length; j++) {
+      if(arr[i] === arr[j]) {
+        arr.splice(i, 1)
+        i--
+      }
+    }
   }
+  return arr
 }
 
 
