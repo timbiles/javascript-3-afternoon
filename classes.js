@@ -108,6 +108,7 @@ class ProgressiveManager extends Manager {
     this.title = 'Not a manager';
     this.bonus = 0;
   }
+  
 }
 
 ProgressiveManager
